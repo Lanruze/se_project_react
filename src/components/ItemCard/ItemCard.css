@@ -1,30 +1,33 @@
-.card{
-width: 323px;
-height: 326px;
-position: relative;
-display: flex;
-justify-content: center;
-border: 1px solid #0000004D;
-border-radius: 10px;
+.card {
+  width: 323px;
+  height: 326px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #0000004d;
+  border-radius: 10px;
 }
-.card__name{
-    display: flex;
-    justify-content: center;
-position: absolute;
-top: 15px;
-margin: 0;
-width: 73px;
-height: 24px;
-opacity: 1;
-border-radius: 4px;
-background-color: #fff;
-font-family: "Cabinet Grotesk", sans-serif;
-font-size: 16px;
-line-height: 20px;
+.card__name {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 15px;
+  margin: 0;
+  width: 73px;
+  height: 24px;
+  opacity: 1;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
 
-font-weight: 700px;
-
+  font-weight: 700;
 }
-.card__image{
-width: 100%;
+.card__image {
+  width: 100%;
+}
+
+.card__image:hover {
+  cursor: pointer;
 }

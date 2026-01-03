@@ -1,7 +1,7 @@
-.page{
-  background-color:#F3F3F3;
-  font-family: "Cabinet Grotesk", sans-serif;
-   }
+.page {
+  background-color: #f3f3f3;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+}
 
 .page__content {
   max-width: 1360px;

@@ -4,9 +4,9 @@
   height: 80px;
   border-radius: 12px;
   overflow: hidden;
-  font-family: "Cabinet Grotesk", sans-serif;
-font-size: 36px;
-line-height: 40px;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 36px;
+  line-height: 40px;
 }
 
 .weather-card__temp {
@@ -16,8 +16,7 @@ line-height: 40px;
   position: absolute;
   top: 20px;
   left: 16px;
-  color: #FFFFFF;
-
+  color: #ffffff;
 }
 
 .weather-card__image {

@@ -1,53 +1,47 @@
-.modal__image{
-    max-width: 498px;
-    height: 498px;
-     border-radius: 16px;
-     padding: 0;
-     
+.modal__image {
+  max-width: 498px;
+  height: 498px;
+  border-radius: 16px;
+  padding: 0;
 }
-.modal__close_type_preview{
-    background-color: transparent;
-  color:#0000004D;
+.modal__close_type_preview {
+  background-color: transparent;
+  color: #0000004d;
   width: 20px;
   height: 20px;
-
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
 }
 
-.modal__close_type_preview:hover{
-   cursor: pointer;
-  
-
+.modal__close_type_preview:hover {
+  cursor: pointer;
 }
-.modal__content_type_image{
-    max-width: fit-content;
-    height: 610px;
-    border-radius: 16px;
-    padding: 0;
-    border: none;
-
+.modal__content_type_image {
+  max-width: fit-content;
+  height: 610px;
+  border-radius: 16px;
+  padding: 0;
+  border: none;
 }
-.modal__caption{
-    font-family: Cabinet Grotesk;
+.modal__caption {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
 
-margin: 0;
-font-family: "Cabinet Grotesk", sans-serif;
-font-size: 20px;
-line-height: 24px;
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 24px;
 }
-.modal__weather{
-   font-family: "Cabinet Grotesk", sans-serif;
+.modal__weather {
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
 
+  font-size: 20px;
 
-font-size: 20px;
-
-line-height: 24px;
-margin: 0;
-
+  line-height: 24px;
+  margin: 0;
 }
-.modal__footer{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 20px 0 32px 32px;
-    margin: 0;
+.modal__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 0 32px 32px;
+  margin: 0;
 }
