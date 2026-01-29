@@ -70,7 +70,7 @@ export const defaultWeatherOptions = {
   },
 };
 
-export const defaultClothingItems = [
+const defaultClothingItems = [
   {
     _id: 1,
     name: "Boot",
@@ -168,7 +168,6 @@ export const defaultClothingItems = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09",
   },
 ];
-
 export const coordinates = {
   latitude: 29.794861,
   longitude: -95.816528,

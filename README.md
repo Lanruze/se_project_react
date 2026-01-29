@@ -31,10 +31,15 @@ The application uses reusable components, controlled modals, and state managemen
 - Asset management using import.meta.url
 
 ## Pictures, GIFs, or screenshots that detail project features 
+
 - [Link to screenshots](https://docs.google.com/document/d/1aG8Yu9XxK-jxNaKpgiopxeJMe9D5o9KwkIiLAgenb_8/edit?usp=drive_link)
 
 ## Deployment
 - [Link to App](https://lanruze.github.io/se_project_react/) 
+
+## Project Pitch Video
+ 
+ Check out [this video](https://drive.google.com/file/d/1PlWksMJLfgHqddkNqo5D-PmR7L0zuy0t/view?usp=drive_link), where I describe my project and some challenges I faced while building it.
 
 ## Author
 Lanre Afolabi

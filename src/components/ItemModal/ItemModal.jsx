@@ -1,6 +1,6 @@
 import "./ItemModal.css";
 import whiteclose from "../../assets/whiteclose.svg";
-function ItemModal({ activeModal, onClose, card }) {
+function ItemModal({ activeModal, card, onClose, onDelete }) {
   return (
     <div className={`modal ${activeModal === "preview" && "modal_opened"}`}>
       <div className="modal__content modal__content_type_image">
@@ -11,10 +11,15 @@ function ItemModal({ activeModal, onClose, card }) {
         >
           <img src={whiteclose} alt="Close Button" />
         </button>
-        <img src={card.link} alt={card.name} className="modal__image" />
+        <img src={card.imageUrl} alt={card.name} className="modal__image" />
         <div className="modal__footer">
-          <p className="modal__caption">{card.name}</p>
-          <p className="modal__weather">Weather: {card.weather}</p>
+          <div className="modal__footer-description">
+            <p className="modal__caption">{card.name}</p>
+            <p className="modal__weather">Weather: {card.weather}</p>
+          </div>
+          <button className="modal__delete" onClick={() => onDelete(card._id)}>
+            Delete item
+          </button>
         </div>
       </div>
     </div>

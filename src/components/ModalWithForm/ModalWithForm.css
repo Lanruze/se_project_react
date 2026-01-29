@@ -73,6 +73,7 @@
   margin-bottom: 24px;
   margin-top: 8px;
   padding: 0;
+  background-color: transparent;
 }
 
 .modal__radio-buttons {
@@ -126,11 +127,23 @@
   width: 124px;
   height: 36px;
   margin-top: 32px;
-  background-color: #0000004d;
+  background-color: #000000;
+
   color: #fff;
   border: none;
 }
 
 .modal__submit:hover {
   cursor: pointer;
+  background: #00000099;
+}
+.modal__submit:disabled {
+  background-color: #bdbdbd;
+  color: #fff;
+  cursor: not-allowed;
+}
+
+/* prevent hover when disabled */
+.modal__submit:hover:not(:disabled) {
+  background-color: #00000099;
 }
