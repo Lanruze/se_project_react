@@ -1,6 +1,7 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useForm } from "../../hooks/useForm";
 
+
 const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
   const defaultValues = {
     name: "",
