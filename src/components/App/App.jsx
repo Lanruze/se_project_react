@@ -27,10 +27,10 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [clothingItems, setClothingItems] = useState([]);
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
-  
-const handleAddItemClick = () => {
-  setActiveModal("add-garment");
-};
+
+  const handleAddItemClick = () => {
+    setActiveModal("add-garment");
+  };
 
   const handleToggleSwitchChange = () => {
     setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");

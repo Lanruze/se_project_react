@@ -11,11 +11,11 @@ function Header({ handleAddClick, weatherData }) {
     day: "numeric",
   });
 
-const username = "Lanre Afolabi"; 
-  const userAvatar = null; 
+  const username = "Lanre Afolabi";
+  const userAvatar = null;
 
   const userInitial = username.charAt(0).toUpperCase();
-  
+
   return (
     <header className="header">
       <NavLink to="/">
@@ -24,7 +24,7 @@ const username = "Lanre Afolabi";
       <p className="header__date-and-location">
         {currentDate}, {weatherData.city}
       </p>
-      
+
       <ToggleSwitch />
       <button onClick={handleAddClick} className="header__add-clothes-btn">
         + Add clothes
@@ -34,19 +34,18 @@ const username = "Lanre Afolabi";
           <p className="header__username">{username}</p>
           {userAvatar ? (
             <img
-            className="header__avatar"
-            src={userAvatar}
-            alt="user avatar"
-            onError={(e) => (e.target.src = defaultAvatar)}
+              className="header__avatar"
+              src={userAvatar}
+              alt="user avatar"
+              onError={(e) => (e.target.src = defaultAvatar)}
             />
-          ) : (<div className="header__avatar header__avatar_placeholder">
+          ) : (
+            <div className="header__avatar header__avatar_placeholder">
               {userInitial}
             </div>
-          
           )}
         </div>
       </NavLink>
-      
     </header>
   );
 }
