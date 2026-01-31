@@ -11,7 +11,7 @@ export default function Profile({
   const userAvatar = null;
   return (
     <section className="profile">
-      <SideBar />
+      <Sidebar />
       <ClothesSection
         handleCardClick={handleCardClick}
         clothingItems={clothingItems}
