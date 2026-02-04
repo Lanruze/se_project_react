@@ -50,7 +50,8 @@
 }
 
 .modal__delete {
-  margin-top: 24.6px;
+  font-family: "Cabinet Grotesk", Arial, sans-serif;
+  font-size: 16px;
   padding: 0;
   border: none;
   color: #ff4d00;

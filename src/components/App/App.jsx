@@ -76,6 +76,17 @@ function App() {
   };
 
   useEffect(() => {
+    const closeByEscape = (e) => {
+      if (e.key === "Escape") {
+        setActiveModal("");
+      }
+    };
+
+    document.addEventListener("keydown", closeByEscape);
+    return () => document.removeEventListener("keydown", closeByEscape);
+  }, []);
+
+  useEffect(() => {
     getWeather(coordinates, APIkey)
       .then((data) => {
         const filteredData = filterWeatherData(data);
@@ -128,7 +139,7 @@ function App() {
           onClose={closeActiveModal}
         />
         <ItemModal
-          isOpen={activeModal === "add-garment"}
+          isOpen={activeModal === "preview"}
           card={selectedCard}
           onClose={closeActiveModal}
           onDelete={handleDeleteItem}
