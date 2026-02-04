@@ -6,8 +6,7 @@
   justify-content: center;
   border: 1px solid #0000004d;
   border-radius: 10px;
-
-  
+  overflow: hidden;
 }
 .card__name {
   font-family: "Cabinet Grotesk", Arial, sans-serif;
@@ -24,7 +23,6 @@
   line-height: 20px;
   font-weight: 500;
   color: #00000099;
-
 }
 .card__image {
   width: 100%;

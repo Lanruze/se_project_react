@@ -1,6 +1,5 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import { useForm } from "../../hooks/useForm";
-
+import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 
 const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
   const defaultValues = {
@@ -8,14 +7,43 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
     imageUrl: "",
     weather: "",
   };
-  const { values, handleChange } = useForm(defaultValues);
-  const isFormValid = values.name && values.imageUrl && values.weather;
 
-  function handleSubmit(evt) {
-    evt.preventDefault();
+  const validateForm = (formValues) => {
+    const newErrors = {};
+
+    if (!formValues.name.trim()) {
+      newErrors.name = "Name is required";
+    } else if (formValues.name.length > 30) {
+      newErrors.name = "Name must not exceed 30 characters";
+    }
+
+    if (!formValues.imageUrl.trim()) {
+      newErrors.imageUrl = "Image URL is required";
+    } else {
+      try {
+        new URL(formValues.imageUrl);
+      } catch {
+        newErrors.imageUrl = "Please enter a valid URL";
+      }
+    }
+
+    return newErrors;
+  };
+
+  const {
+    values,
+    handleChange,
+    errors,
+    isFormValid,
+    handleSubmit,
+    resetForm,
+    submitted,
+  } = useFormWithValidation(defaultValues, validateForm);
+
+  const onSubmit = handleSubmit(() => {
     onAddItem(values);
- 
-  }
+    resetForm();
+  });
 
   return (
     <ModalWithForm
@@ -23,36 +51,39 @@ const AddItemModal = ({ isOpen, onAddItem, onClose }) => {
       name="new-card"
       isOpen={isOpen}
       onClose={onClose}
-      onSubmit={handleSubmit}
+      onSubmit={onSubmit}
       buttonText="Add garment"
-      isDisabled={!isFormValid}
+      isDisabled={submitted && !isFormValid}
     >
       <label htmlFor="name" className="modal__label">
         Name{" "}
         <input
           type="text"
-          required
-          className="modal__input"
+          className={`modal__input ${errors.name ? "modal__input_error" : ""}`}
           id="name"
           placeholder="Name"
           name="name"
-          minLength="1"
-          maxLength="30"
           value={values.name}
           onChange={handleChange}
+          autoComplete="off"
         />
+        {errors.name && <span className="modal__error">{errors.name}</span>}
       </label>
       <label htmlFor="imageUrl" className="modal__label">
         Image{" "}
         <input
-          type="url" required
-          className="modal__input"
+          type="text"
+          className={`modal__input ${errors.imageUrl ? "modal__input_error" : ""}`}
           id="imageUrl"
           placeholder="Image URL"
           name="imageUrl"
           value={values.imageUrl}
           onChange={handleChange}
+          autoComplete="off"
         />
+        {errors.imageUrl && (
+          <span className="modal__error">{errors.imageUrl}</span>
+        )}
       </label>
       <fieldset className="modal__radio-buttons">
         <legend className="modal__legend">Select the weather type:</legend>

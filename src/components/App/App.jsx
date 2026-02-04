@@ -49,7 +49,7 @@ function App() {
     removeItem(id)
       .then(() => {
         setClothingItems((prevItems) =>
-          prevItems.filter((item) => item._id !== id)
+          prevItems.filter((item) => item._id !== id),
         );
         closeActiveModal();
       })
@@ -128,7 +128,7 @@ function App() {
           onClose={closeActiveModal}
         />
         <ItemModal
-          activeModal={activeModal}
+          isOpen={activeModal === "add-garment"}
           card={selectedCard}
           onClose={closeActiveModal}
           onDelete={handleDeleteItem}

@@ -1,5 +1,3 @@
-
-
 .toggle-switch {
   width: 56px;
   height: 28px;
@@ -8,8 +6,6 @@
   overflow: hidden;
   border-radius: 20px;
   position: relative;
- left: 673px;
-
 }
 
 .toggle-switch__checkbox {
@@ -45,7 +41,6 @@
 .toggle-switch__checkbox:not(:checked) ~ .toggle-switch__text_F {
   color: white;
   transform: translateX();
-  mix-blend-mode: darken;
 }
 
 .toggle-switch__checkbox:checked ~ .toggle-switch__text_C {
